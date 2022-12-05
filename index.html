@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form action="/homepage.html">
+<form action="/homepage.html"> 
+<form id = "secrets-form">
+<div HTMLFormElement.autocomplete off>
   <label for="secrets">Tell me a secret:</label><br>
   <input type="text" id="secrets" name="secrets"><br>
   <input type="submit" value="shhhh...I promise I won't tell">
 </form> 
 <script>
-secrets-database.write("<p>secrets</p>");
+const inputs = secrets-database.getElementById("secrets-form").elements;
+const inputByName = inputs["secrets"];
 </script>
-
 </body>
 </html>
 

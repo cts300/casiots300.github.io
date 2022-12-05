@@ -7,11 +7,16 @@
 <div HTMLFormElement.autocomplete=off>
   <label for="secrets">Tell me a secret:</label><br>
   <input type="text" id="secrets" name="secrets"><br>
-  <input type="submit" value="shhhh...I promise I won't tell">
+  <input type="submit" value="shhhh...I promise I won't tell" onclick="othername()">
 </form> 
 <script>
 const inputs = secrets-database.getElementById("secrets-form").elements;
 const inputByName = inputs["secrets"];
+
+function othername() {
+    var input = secretsfile.getElementById("secrets").value;
+    alert(input);
+}
 </script>
 </body>
 </html>

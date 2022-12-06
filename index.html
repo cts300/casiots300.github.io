@@ -16,6 +16,21 @@
  document.getElementById("displayText").innerHTML = input;
 }
 </script>
+
+<div id="notes">
+</div>
+<script>
+if(typeof(Storage)!=="undefined")
+  {
+  localStorage.secret= input;
+  document.getElementById("notes").innerHTML= "Your Secret: " + localStorage.secrets;
+  }
+else
+  {
+  document.getElementById("notes").innerHTML="Sorry, your browser does not support web storage...";
+  }
+</script>
+
 </body>
 </html> 
 

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
+var myFile = "/secretsFile.html" 
+ 
 <form action="/homepage.html" method="get" id = myForm autocomplete = "off"> 
 
   <label for="myForm">Tell me a secret:</label><br>
@@ -11,14 +13,10 @@
 <script>
  function myfunction() {
  var input = document.getElementById("secrets").value;
- alert("wow. you sick and twisted bastard. im telling everyone this");
- document.getElementById("/secretsFile.html").innerHTML = input;
+ var myFile = "/secretsFile.html" 
+ myFile.document.getElementById("displayText").innerHTML = input;
 }
 </script>
-
 </body>
 </html> 
-</script>
-</body>
-</html>
 

@@ -2,24 +2,23 @@
 <html>
 <body>
 <form action="/homepage.html" method="get"> 
+<form id = "myForm" autocomplete = "off">
 
-<form id = "secrets-form">
-<div HTMLFormElement.autocomplete=off>
-  <label for="secrets">Tell me a secret:</label><br>
-  <input type="text" id="secrets" name="secrets"><br>
-  <input type="submit" value="shhhh...I promise I won't tell" onclick="download_txt()">
+  <label for="myForm">Tell me a secret:</label><br>
+  <input type = "text" id = "secrets" name = "myInput"> <br>
+  
+  <input type="button" value="shhhh...I promise I won't tell" onclick = 		"myfunction()">
 </form> 
 <script>
-function download_txt() {
-
-  var textToSave = form.getElementById('secrets').innerHTML;
-  var hiddenElement = document.createElement('a');
-
-  hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
-  hiddenElement.target = '_blank';
-  hiddenElement.download = 'myFile.txt';
-  hiddenElement.click();
+ function myfunction() {
+ var input = document.getElementById("secrets").value;
+ alert("wow. you sick and twisted bastard");
+ document.getElementById("/secretsFile.html").innerHTML = input;
 }
+</script>
+
+</body>
+</html> 
 </script>
 </body>
 </html>

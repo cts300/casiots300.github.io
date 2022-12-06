@@ -6,12 +6,12 @@
   <label for="myForm">Tell me a secret:</label><br>
   <input type = "text" id = "secrets" name = "myInput"> <br>
   
-  <input type="button" value="shhhh...I promise I won't tell" onclick = 		"myfunction()">
+  <input type="submit" value="shhhh...I promise I won't tell" onclick = "myfunction()">
 </form> 
 <script>
  function myfunction() {
  var input = document.getElementById("secrets").value;
- alert("wow. you sick and twisted bastard");
+ alert("wow. you sick and twisted bastard. im telling everyone this");
  document.getElementById("/secretsFile.html").innerHTML = input;
 }
 </script>

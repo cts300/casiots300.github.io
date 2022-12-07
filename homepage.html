@@ -9,5 +9,20 @@
 <p>This is where I keep a collection of things and stuff that 
 	I find funn/weird/interesting.</p>
 <img src="/images/aevildogselfie.jpeg" alt="aevildogselfie">
+
+<div id="notes">
+</div>
+<p id = "notes" /p>
+<script>
+if(typeof(Storage)!=="undefined" && localStorage.secretStore)
+  {
+  document.getElementById("notes").innerHTML=localStorage.secretStore;
+  }
+else
+  {
+  document.getElementById("notes").innerHTML="Sorry, your browser does not support web storage...";
+  }
+</script>
+
 </body>
 </html>

@@ -17,14 +17,12 @@
 }
 </script>
 
-<div id="notes">
 </div>
-
 <script>
 if(typeof(Storage)!=="undefined")
   {
-  localStorage.lastname="Smith";
-  document.getElementById("notes").innerHTML="Last name: " + localStorage.lastname;
+  localStorage.secretStore = input;
+  document.getElementById("notes").innerHTML= localStorage.secretStore;
   }
 else
   {

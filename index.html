@@ -12,21 +12,13 @@
 </form> 
 
 <script>
- function myfunction() {
- var input = document.getElementById("secrets").value;
- document.getElementById("displayText").innerHTML = input;
-}
-</script>
-
-<div id = "undefined"></div>
-<script>
 if(typeof(Storage)!=="undefined")
   {
-  localStorage.getItem("SecretStore", input); 
+	localStorage.getItem("SecretStore", myInput); 
   }
 else
   {
-  document.getElementById("notes").innerHTML="Sorry, your browser does not support web storage...";
+  document.getElementById("displaySecret").innerHTML="Sorry, your browser does not support web storage...";
   }
 </script>
 

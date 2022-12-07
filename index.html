@@ -10,6 +10,7 @@
   
   <input type="submit" value="shhhh...I promise I won't tell" onclick = "myfunction()">
 </form> 
+
 <script>
  function myfunction() {
  var input = document.getElementById("secrets").value;
@@ -17,12 +18,11 @@
 }
 </script>
 
-</div>
+<div id = "undefined"></div>
 <script>
 if(typeof(Storage)!=="undefined")
   {
-  localStorage.secretStore = input;
-  document.getElementById("notes").innerHTML= localStorage.secretStore;
+  localStorage.getItem("SecretStore", input); 
   }
 else
   {

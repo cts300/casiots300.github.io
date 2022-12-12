@@ -18,8 +18,8 @@ p {
 <body>
   
   <script>
-      let d = JSON.parse(document.localStorage.getItem("theSecret"));
-      document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
+const d = JSON.parse(window.localStorage.getItem('user'));
+document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
   </script>
  
 </body>

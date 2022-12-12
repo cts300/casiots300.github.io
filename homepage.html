@@ -18,7 +18,7 @@ p {
 <body>
   
   <script>
-      let d = localStorage.myInput;
+      let d = JSON.parse(document.localStorage.getItem('name'));
       document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
   </script>
  

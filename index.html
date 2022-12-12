@@ -5,11 +5,13 @@
 <form action="/homepage.html" method="get" id = myForm autocomplete = "off"> 
 
   <label for="myForm">Tell me a secret:</label><br>
-  <input type = "text" id = "secrets" localStorage.name = "myInput"; 
+  <input type = "text" id = "secrets" name = "myInput"; 
   <br>
   <input type="submit" value="shhhh...I promise I won't tell">
 </form> 
-
 </body>
+<script>
+document.localStorage.setItem("theSecret",JSON.stringify(name));
+</script>
 </html> 
 

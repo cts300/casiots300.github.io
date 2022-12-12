@@ -20,8 +20,8 @@ p {
   <script>
     let e = new Date();
     document.body.innerHTML = "<h1>Today's date is " + e + "</h1>"
-    //let d = localStorage.getItem('secret')); 
-	//document.body.innerHTML = "<p>Today's date is " + d + "p>"
+    var storedValue = localStorage.getItem("secret");
+	document.body.innerHTML = "<p>Today's date is " +  storedValue+ "p>"
   </script>
  
 </body>

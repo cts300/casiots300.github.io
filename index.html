@@ -7,15 +7,14 @@
   <label for="myForm">Tell me a secret:</label><br>
   <input type = "text" id = "secrets" name = "myInput"; 
   <br>
-  <input type="submit" value="shhhh...I promise I won't tell">
+  <input type="submit" value="shhhh...I promise I won't tell" onsubmit="saveInput()">
 </form> 
-</body>
 <script>
-const person = {
-    name: "Obaseki Nosa",
-    location: "Lagos",
-   localStorage.setItem('user', JSON.stringify(person));
-}
+	function saveInput(){
+	var input = document.getElementById("myInput"); 
+	localStorage.setItem("secrets", input); 
+	}
 </script>
+</body>
 </html> 
 

@@ -7,34 +7,26 @@ p {
 } 
 </style>
 
-<head>
-
+  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Today's Date</title>
 </head>
- 
-<body>
-  
-  <script>
-    let e = new Date();
+
+<script>
+	let e = new Date();
     document.body.innerHTML = "<h1>Today's date is " + e + "</h1>"
-    var storedValue = localStorage.getItem("secrets");
-	document.body.innerHTML = "<p>Today's date is " +  storedValue + "</p>"
-  </script>
- 
-</body>
- 
-</html>
-  
-<title>Page Title</title>
-</head>
-<body>
+    var storedValue = localStorage.getItem("yourSecret");
+	window.body.innerHTML = "<p>Today's date is " +  storedValue + "</p>"
+</script>
+
+<body>  
 <h1 style = "color:blue;"> My Awesome Website</h1>
 <p style = "color:red:"> This is where I keep a collection of things and stuff that 
 	I find fun/weird/interesting.</p>
 <p> Click below for Awesome Games </div>
 <img src="/images/aevildogselfie.jpeg" alt="aevildogselfie">
 </body>
+
 </html>

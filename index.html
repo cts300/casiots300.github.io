@@ -2,17 +2,17 @@
 <html>
 <body>
 
-<form action="/homepage.html" method="get" id = myForm autocomplete = "off"> 
+<form action="/homepage.html" method="get" id = myForm autocomplete = "off" onsubmit="saveInput()"> 
 
   <label for="myForm">Tell me a secret:</label><br>
   <input type = "text" id = "secrets" name = "myInput"; 
   <br>
-  <input type="submit" value="shhhh...I promise I won't tell" onsubmit="saveInput()">
+  <input type="submit" value="shhhh...I promise I won't tell">
 </form> 
 <script>
 	function saveInput(){
 	var input = document.getElementById("myInput"); 
-	localStorage.setItem("secrets", input); 
+	localStorage.setItem('secret', input); 
 	}
 </script>
 </body>

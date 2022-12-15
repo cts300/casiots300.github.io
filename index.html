@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today's Date</title>
+</head>
 <body>
 
 <form action="/homepage.html" method="get" id = myForm autocomplete = "off"/> 
 
   <label for="myForm">Tell me a secret:</label><br>
-  <input type = "text" id = "secrets" name = "myInput"; 
+  <input type = "text" id = "myInput"; 
   <br>
   <input type="submit" value="shhhh...I promise I won't tell">
 </form> 
@@ -13,8 +18,12 @@
 
 <script>
 	function saveInput(){
-	var input = document.getElementById("secrets"); 
-	localStorage.setItem("secret", input.val()); 
+	let input = document.getElementById("myInput").value; 
+	localStorage.setItem("yourSecret", input); 
+	updateHTML(); 
+	
+	var storedValue = localStorage.getItem("yourSecret");
+	window.body.innerHTML = "<p>Today's date is " +  storedValue + "</p>"
 	}
 </script>
 </body>

@@ -18,11 +18,12 @@
 
 <script>
 	function saveInput(){
-	let input = document.getElementById("myInput").value; 
-	localStorage.setItem("yourSecret", input); 
+	let input = document.getElementById("myInput"); 
+	localStorage.setItem("yourSecret", "myInput"); 
+	localStorage.getItem("yourSecret"); 
 	updateHTML(); 
 	
-	var storedValue = localStorage.getItem("yourSecret");
+	let storedValue = localStorage.getItem("yourSecret");
 	window.body.innerHTML = "<p>Today's date is " +  storedValue + "</p>"
 	}
 </script>

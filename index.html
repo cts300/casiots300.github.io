@@ -12,12 +12,15 @@
   <label for="myForm">Tell me a secret:</label><br>
   <input type = "text" id = "myInput"; 
   <br>
-  <input type="submit" value="shhhh...I promise I won't tell">
+  <input type="submit" value="shhhh...I promise I won't tell" onsubmit=myFunction()>
+  
 </form> 
 
 <script>
+function myFunction(myInput) {
 	localStorage.setItem("yourSecret", "myInput"); 
 	localStorage.getItem("yourSecret"); 
+	}
 </script>
 </body>
 </html> 

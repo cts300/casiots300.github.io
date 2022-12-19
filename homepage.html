@@ -9,11 +9,16 @@ h1 {
 	text-align: center; 
 	color: blue; 
 }
+.column {
+	  float: left;
+	  width: 500px;
+	  height: auto; 
+	}
 img {
-  width: 500px; 
-  height: auto
-  text-align: center, 
+	width: 100%; 
+	height: 100%; 
 }
+
 #aevildogselfie{    
  float: left;  
  }  
@@ -38,8 +43,12 @@ img {
 <h1> My Awesome Website</h1>
 <p> This is where I keep a collection of things and stuff that 
 	I find fun/weird/interesting.</p>
-	
-<img src="/images/aevildogselfie.jpeg" alt="aevildogselfie">
-<img src= "/images/attheheartofcaptialism.png" alt="attheheartofcapitalism">
 
+<div class= "column">
+<img src="/images/aevildogselfie.jpeg" alt="aevildogselfie">
+</div>
+
+<div class= "column">
+<img src= "/images/attheheartofcaptialism.png" alt="attheheartofcapitalism">
+</div>
 </html>

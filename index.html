@@ -12,16 +12,19 @@
   <label for="myForm">Tell me a secret:</label><br>
   <input type = "text" id = "myInput"; 
   <br>
-  <input type="submit" value="shhhh...I promise I won't tell" onsubmit=myFunction()>
+  <input type="button" name="submit" value="Submit" onclick="processFormData();" />
+  <input type="submit" value="shhhh...I promise I won't tell">
   
 </form> 
 
 <script>
-function myFunction(myInput) {
-	localStorage.setItem("yourSecret", "myInput"); 
-	localStorage.getItem("yourSecret"); 
-	}
+function processFormData(){
+	var secretElement = document.getElementById("myInput");
+	localStorage.setItem("userInput", secretElement);
+	alert(userInput); 
+}
 </script>
+
 </body>
 </html> 
 

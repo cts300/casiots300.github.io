@@ -45,12 +45,15 @@ img {
     <title>Awesome Website !!!</title>
 </head>
 
+<p id="demo"></p>
+
 <script>
-    let storedValue = localStorage.getItem("yourSecret");
-	document.body.innerHTML = "<p>" storedValue + "</p>"
+  var x = localStorage.getItem("newSecret");
+  document.getElementById("demo").innerHTML = x;
 </script>
 
 <body>  
+
 <h1> My Awesome Website</h1>
 
 <div class="text"> This is where I keep a collection of things and stuff that 

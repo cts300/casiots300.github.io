@@ -12,16 +12,15 @@
   <label for="myForm">Tell me a secret:</label><br>
   <input type = "text" id = "myInput"; 
   <br>
-  <input type="button" name="submit" value="Submit" onclick="processFormData();" />
+  <input type="button" name="submit" value="Submit" onclick="processFormData" />
   <input type="submit" value="shhhh...I promise I won't tell">
   
 </form> 
 
 <script>
 function processFormData(){
-	var secretElement = document.getElementById("myInput");
-	localStorage.setItem("userInput", secretElement);
-	alert(userInput); 
+	var x = document.gelElementById("myInput"));
+	localStorage.newSecret = x; 
 }
 </script>
 

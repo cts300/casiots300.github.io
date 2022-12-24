@@ -20,14 +20,24 @@ h1 {
 	height: auto; 
 	}
 .text {
-  position: fixed;
+  float: center;
   top: 10%;
-  right: 40%; 
   width: 300px;
   border: 3px solid #53CA05;
   font-family: "OCR A Std", monospace; 
 }
-
+.next {
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  border-radius: 3px 0 0 3px;
+}
 img {
 	width: 500px; 
 	height: auto; 
@@ -83,5 +93,54 @@ img {
 <img src= "/images/shepherdsCarol.png" alt="shepherdsCarol">
 </a>
 
+  <div class="mySlides">
+    <div class="next"> next </div>
+      <img src="/images/drumModes/mode_1_1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="next"> next </div>
+      <img src="/images/drumModes/mode_1_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="nextt"> next </div>
+      <img src="/images/drumModes/mode_1_3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="next"> next </div>
+      <img src="/images/drumModes/mode_2_1.jpg" style="width:100%">
+  </div>
+  
+<a class="next" onclick="plusSlides(1)"> &#10095; </a>
+
 </div>
+  
+<script>
+let slideIndex = 1;
+  showSlides(slideIndex);
+	
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+	
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </html>

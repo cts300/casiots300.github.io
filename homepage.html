@@ -16,10 +16,24 @@ h1 {
 	font-family: "OCR A Std", monospace; 
 }
 .column {
-	float: left; 
-	height: auto; 
-	width: 100%; 
-	}
+  float: left;
+  width: 25%;
+  padding: 5px;
+  height: auto
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 .text {
   position: fixed;
   top: 10%;
@@ -38,7 +52,7 @@ h1 {
   font-family: "OCR A Std", monospace; 
 }
 img {
-	width: 30%;
+	width: 100%;
 	border: 3px solid #53CA05; 
 }
 #mythOfMentalIllness { 
@@ -77,23 +91,33 @@ img {
 <a target="_blank" href="https://depts.washington.edu/psychres/wordpress/wp-content/uploads/2017/07/100-Papers-in-Clinical-Psychiatry-Conceptual-issues-in-psychiatry-The-Myth-of-Mental-Illness.pdf">
 <img src= "/images/mythOf.png" alt="mythOfMentalIllness">
 </a>
+</div>
 
+<div class= "column">
 <a target="_blank" href="https://kupdf.net/download/fernando-pessoa-the-book-of-disquiet_5c045cf8e2b6f5400c7a830a_pdf">
 <img src= "/images/bookOf.png" alt="bookOfDisquiet">
 </a>
+</div>
 
+<div class= "column">
 <a target="_blank" href="https://www.youtube.com/watch?v=SS8ey4g6jYo&ab_channel=ClassicalMusicVideo">
 <img src= "/images/ricardoConcerto.png" alt="straussHornConcerto">
 </a>
+</div>
 
+<div class= "column">
 <a target="_blank" href="https://socialecologies.wordpress.com/2014/05/20/the-exterminating-angel-the-dark-flows-of-capital/#:~:text=The%20schizophrenic%20deliberately%20seeks%20out,proletariat%2C%20and%20its%20exterminating%20angel.">
 <img src= "/images/attheheartofcaptialism.png" alt="attheheartofcapitalism">
 </a>
+</div>
 
+<div class= "column">
 <a target="_blank" href="https://www.youtube.com/watch?v=j8N2YTikOsc&ab_channel=spiritdei">
 <img src= "/images/shepherdsCarol.png" alt="shepherdsCarol">
 </a>
+</div>
 
+<div class= "column">
   <div class="mySlides">
     <img src="/images/drumModes/mode_1_11.jpg"
   	  <a class="next" onclick="plusSlides(1)"> &#10095; </a> </img>
@@ -113,7 +137,6 @@ img {
     <img src="/images/drumModes/mode_1_14.jpg"
       <a class= "next" onclick="plusSlides(1)"> &#10095; </a> </img>
   </div>
-
 </div>
   
 <script>

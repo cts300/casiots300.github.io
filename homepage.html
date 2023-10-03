@@ -248,9 +248,12 @@ let slideIndex = 1;
   showSlides(slideIndex);
 	
 function plusSlides(n) {
-  showSlides(slideIndex += n);
-  if (n > 4){
-  	n = 1; 
+	if (n < 4){
+  		showSlides(slideIndex += n);
+  	}
+  	else {
+  		n = 1; 
+  	}
   }
 }
 	

@@ -230,13 +230,7 @@ let slideIndex = 1;
   showSlides(slideIndex);
 	
 function plusSlides(n) {
-	if (n < 4){
-  		showSlides(slideIndex += n);
-  	}
-  	else {
-  		n = 1; 
-  	}
-  }
+	showSlides(slideIndex += n);
 }
 	
 function showSlides(n) {
